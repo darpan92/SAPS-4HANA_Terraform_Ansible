@@ -1,0 +1,13 @@
+---
+# tasks file for infrastructure-deploy
+
+- name: init terraform
+  shell: terraform init
+  args:
+    chdir: "{{ terraform_dir }}"
+
+- name: apply terraform script
+  terraform:
+    project_path: "{{ terraform_dir }}"
+#    workspace: "{{ terraform_workspace }}"
+    state: present

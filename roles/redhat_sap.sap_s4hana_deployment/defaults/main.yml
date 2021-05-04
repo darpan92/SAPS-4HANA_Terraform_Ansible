@@ -1,0 +1,53 @@
+# Global Default variables
+# Adapt to your default settings
+
+# If the template to use already has the passwords and they are encrypted the password file must be in the same path as the parameter file
+sap_s4hana_deployment_use_password_file: "n"
+sap_s4hana_deployment_password_file_path:
+
+# Target host path and file name for the sapcar installation file
+sap_s4hana_deployment_sapcar_path:
+sap_s4hana_deployment_sapcar_file_name:
+
+# Target host path and file name for the SWPM .SAR file
+sap_s4hana_deployment_swpm_path:
+sap_s4hana_deployment_swpm_sar_file_name:
+
+# SAP product that will be installed and passed as argument to the sapinst installer, example 'NW_ABAP_OneHost:S4HANA1909.CORE.HDB.ABAP'
+sap_s4hana_deployment_product_id: 
+
+# Response variables for unattended installation config file
+sap_s4hana_deployment_diagnostics_agent_password:
+sap_s4hana_deployment_ascs_instance_nr:
+sap_s4hana_deployment_ascs_instance_hostname:
+sap_s4hana_deployment_pas_instance_nr:
+sap_s4hana_deployment_pas_instance_hostname:
+sap_s4hana_deployment_ddic_000_password:
+sap_s4hana_deployment_ddic_001_password:
+sap_s4hana_deployment_master_password:
+sap_s4hana_deployment_sid:
+sap_s4hana_deployment_db_host:
+sap_s4hana_deployment_db_sid:
+sap_s4hana_deployment_db_schema_abap:
+sap_s4hana_deployment_db_schema_abap_password:
+sap_s4hana_deployment_db_schema_java:
+sap_s4hana_deployment_db_schema_java_password:
+sap_s4hana_deployment_hana_instance_nr:
+sap_s4hana_deployment_hana_systemdb_password:
+sap_s4hana_deployment_hana_system_password:
+sap_s4hana_deployment_parallel_jobs_nr:
+sap_s4hana_deployment_db_sidadm_password:
+sap_s4hana_deployment_igs_path:
+sap_s4hana_deployment_igs_file_name:
+sap_s4hana_deployment_igs_helper_path:
+sap_s4hana_deployment_igs_helper_file_name:
+sap_s4hana_deployment_kernel_dependent_path:
+sap_s4hana_deployment_kernel_dependent_file_name:
+sap_s4hana_deployment_kernel_independent_path:
+sap_s4hana_deployment_kernel_independent__file_name:
+sap_s4hana_deployment_fqdn:
+sap_s4hana_deployment_set_fqdn: "true"
+# S/4 HANA export, HANA Client and SAP HostAgent must be in the same path --> To be Tested
+sap_s4hana_deployment_software_path:
+sap_s4hana_deployment_sapadm_password:
+sap_s4hana_deployment_sap_sidadm_password:

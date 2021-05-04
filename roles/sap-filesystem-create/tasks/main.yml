@@ -1,0 +1,40 @@
+---
+# tasks file for sap-filesystem-create
+
+- name: Create a xfs file system on /dev/vg.sap-app-db/lvhanadata
+  filesystem:
+    fstype: xfs
+    dev: /dev/vg.sap-app-db/lvhanadata
+
+- name: Create a xfs file system on /dev/vg.sap-app-db/lvhanalog
+  filesystem:
+    fstype: xfs
+    dev: /dev/vg.sap-app-db/lvhanalog
+
+- name: Create a xfs file system on /dev/vg.sap-app-db/lvhanashared
+  filesystem:
+    fstype: xfs
+    dev: /dev/vg.sap-app-db/lvhanashared
+
+- name: Create a xfs file system on /dev/vg.sap-app-db/lvmedia
+  filesystem:
+    fstype: xfs
+    dev: /dev/vg.sap-app-db/lvmedia
+
+- name: Create a xfs file system on /dev/vg.sap-app-db/lvsapmnt
+  filesystem:
+    fstype: xfs
+    dev: /dev/vg.sap-app-db/lvsapmnt
+
+- name: Create a xfs file system on /dev/vg.sap-app-db/lvusrsap
+  filesystem:
+    fstype: xfs
+    dev: /dev/vg.sap-app-db/lvusrsap
+
+- name: Create SWAP file system on /dev/vg.sap-app-db/lvswap
+  shell: mkswap /dev/vg.sap-app-db/lvswap
+  ignore_errors: true
+
+
+
+

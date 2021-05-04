@@ -1,0 +1,59 @@
+---
+# tasks file for sap-mount
+
+- name: Mount /hana/data
+  mount:
+    path: /hana/data
+    src: /dev/vg.sap-app-db/lvhanadata
+    fstype: xfs
+    state: mounted
+
+- name: Mount /hana/log
+  mount:
+    path: /hana/log
+    src: /dev/vg.sap-app-db/lvhanalog
+    fstype: xfs
+    state: mounted
+
+- name: Mount /hana/shared
+  mount:
+    path: /hana/shared
+    src: /dev/vg.sap-app-db/lvhanashared
+    fstype: xfs
+    state: mounted
+
+- name: Mount /media
+  mount:
+    path: /media
+    src: /dev/vg.sap-app-db/lvmedia
+    fstype: xfs
+    state: mounted
+
+- name: Mount /sapmnt
+  mount:
+    path: /sapmnt
+    src: /dev/vg.sap-app-db/lvsapmnt
+    fstype: xfs
+    state: mounted
+
+- name: Mount /usr/sap
+  mount:
+    path: /usr/sap
+    src: /dev/vg.sap-app-db/lvusrsap
+    fstype: xfs
+    state: mounted
+
+- name: Activate SWAP
+  shell: swapon -v /dev/vg.sap-app-db/lvswap
+  ignore_errors: true
+
+- name: Add SWAP to fstab
+  blockinfile:
+    path: /etc/fstab
+    insertafter: EOF
+    block:
+      /dev/vg.sap-app-db/lvswap swap swap defaults 0 0
+  
+
+
+

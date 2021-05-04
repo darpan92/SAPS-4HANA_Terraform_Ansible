@@ -1,0 +1,11 @@
+---
+# tasks file for sap-copy-media
+
+- name: Copy SAP HANA Installation Media
+  shell: scp -i "{{ private_key }}" -r "{{ hana_media }}" root@"{{ inventory_hostname }}":/media
+  delegate_to: localhost
+
+- name: Copy SAP S/4HANA Installation Media
+  shell: scp -i "{{ private_key }}" -r "{{ s4_media }}" root@"{{ inventory_hostname }}":/media
+  delegate_to: localhost
+

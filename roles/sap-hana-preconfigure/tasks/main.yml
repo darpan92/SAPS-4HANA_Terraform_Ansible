@@ -1,0 +1,98 @@
+---
+# tasks file for sap-hana-preconfigure
+
+- name: Install SAP Hana Prerequisite Packages for SUSE Linux 15
+  zypper:
+    name: libgcc_s1
+    state: present
+
+- name: Install SAP Hana Prerequisite Packages for SUSE Linux 15
+  zypper:
+    name: libstdc++6
+    state: present
+
+- name: Install SAP Hana Prerequisite Packages for SUSE Linux 15
+  zypper:
+    name: libatomic1
+    state: present
+
+- name: Install SAP Hana Prerequisite Packages for SUSE Linux 15
+  zypper:
+    name: lvm*
+    state: present
+
+- name: Install SAP Hana Prerequisite Packages for SUSE Linux 15
+  zypper:
+    name: xfsprogs
+    state: present
+
+- name: Install SAP Hana Prerequisite Packages for SUSE Linux 15
+  zypper:
+    name: insserv
+    state: present
+
+- name: Install SAP Hana Prerequisite Packages for SUSE Linux 15
+  zypper:
+    name: numactl
+    state: present
+
+- name: Install SAP Hana Prerequisite Packages for SUSE Linux 15
+  zypper:
+    name: tcsh
+    state: present
+
+- name: Install SAP Hana Prerequisite Packages for SUSE Linux 15
+  zypper:
+    name: util-linux
+    state: present
+
+- name: Install SAP Hana Prerequisite Packages for SUSE Linux 15
+  zypper:
+    name: uuidd
+    state: present
+
+- name: Install SAP Hana Prerequisite Packages for SUSE Linux 15
+  zypper:
+    name: util-linux-systemd
+    state: present
+
+- name: Activate UUIDD
+  shell: systemctl start uuidd.socket
+
+- name: Create /hana/data directory
+  file: 
+    path: /hana/data
+    state: directory
+    mode: "u=rwx,g=rwx,o=rwx"
+
+- name: Create /hana/log directory
+  file: 
+    path: /hana/log
+    state: directory
+    mode: "u=rwx,g=rwx,o=rwx"
+
+- name: Create /hana/shared directory
+  file: 
+    path: /hana/shared
+    state: directory
+    mode: "u=rwx,g=rwx,o=rwx"
+
+- name: Create /media directory
+  file: 
+    path: /media
+    state: directory
+    mode: "u=rwx,g=rwx,o=rwx"
+
+- name: Create /sapmnt directory
+  file: 
+    path: /sapmnt
+    state: directory
+    mode: "u=rwx,g=rwx,o=rwx"
+
+- name: Create /usr/sap directory
+  file: 
+    path: /usr/sap
+    state: directory
+    mode: "u=rwx,g=rwx,o=rwx"
+
+

@@ -1,0 +1,49 @@
+---
+# tasks file for sap-lg-lv-create
+
+- name: Create a volume group on top of /dev/sdb
+  lvg:
+    vg: vg.sap-app-db
+    pvs: /dev/sdb
+
+- name: Create a logical volume for /hana/data
+  lvol:
+    vg: vg.sap-app-db
+    lv: lvhanadata
+    size: 400g
+
+- name: Create a logical volume /hana/log
+  lvol:
+    vg: vg.sap-app-db
+    lv: lvhanalog
+    size: 150g
+
+- name: Create a logical volume /hana/shared
+  lvol:
+    vg: vg.sap-app-db
+    lv: lvhanashared
+    size: 125g
+
+- name: Create a logical volume /usr/sap
+  lvol:
+    vg: vg.sap-app-db
+    lv: lvusrsap
+    size: 100g
+
+- name: Create a logical volume /media
+  lvol:
+    vg: vg.sap-app-db
+    lv: lvmedia
+    size: 150g
+
+- name: Create a logical volume /sapmnt
+  lvol:
+    vg: vg.sap-app-db
+    lv: lvsapmnt
+    size: 50g
+
+- name: Create a logical volume SWAP
+  lvol:
+    vg: vg.sap-app-db
+    lv: lvswap
+    size: 30g

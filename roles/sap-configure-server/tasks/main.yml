@@ -1,0 +1,20 @@
+---
+# tasks file for sap-configure-server
+
+- name: Enable Root Login
+  ansible.builtin.lineinfile:
+    path: /etc/cloud/cloud.cfg
+    regexp: '^disable_root:'
+    line: 'disable_root: true'
+
+- name: Update Host File With Virtual Host Name Entries
+  ansible.builtin.lineinfile:
+    path: /etc/hosts
+    line: "{{ ansible_all_ipv4_addresses | ipaddr('private') | first + ' ' + ansible_hostname + '.' + ansible_dns.search | first + ' ' + ansible_hostname }}" 
+
+- name: Restart SSHD 
+  shell: systemctl restart sshd
+
+
+
+
