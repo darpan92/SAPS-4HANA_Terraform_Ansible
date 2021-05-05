@@ -10,12 +10,12 @@ variable "instance_name"{
 
 variable "ami_id"{
 	type = string
-        default = ""
+        default = "ami-0f052119b3c7e61d1"
 }
 
 variable "instance_type"{
 	type = string
-        default = ""
+        default = "r4.8xlarge"
 }
 
 variable "volume_availability_zone"{
@@ -25,7 +25,7 @@ variable "volume_availability_zone"{
 
 variable "volume_size"{
 	type = string
-        default = ""
+        default = "1024"
 }
 
 variable "volume_name"{
