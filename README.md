@@ -59,7 +59,7 @@ Below is an example file for Ansible. This file is located in /vars/ansible_var.
 
 ```
 The terraform file can be located under /terraform/AWS/variables.tf. Below is an example of what a filled one would look like. 
-```json
+
 
 variable "provider_region"{
 	type = string
@@ -106,7 +106,7 @@ variable "key_name"{
         default = "Test"
 }
 
-'''
+
 
 
 
