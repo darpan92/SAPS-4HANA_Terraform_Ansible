@@ -1,5 +1,5 @@
 # Automate the Deployment of SAP S/4HANA to a SUSE linux based enviornment
-The goal of the project is to automate the deployment of SAP S/4HANA 2020 on a SUSE Enviornment. This is a greenfield approach and can easily adapted to any enviornment regardless of if it is a hyperscaler on on-premise landscape. 
+The goal of the project is to automate the deployment of SAP S/4HANA 2020 on a SUSE Enviornment. This is a greenfield approach and can easily adapted to any enviornment regardless of if it is a hyperscaler or on-premise landscape. 
 
 ### Configuration
 In order to run the program, you will need to fill out two parameters files. One for Terraform and one for Ansible. 
