@@ -22,7 +22,7 @@
 
 - name: Process S4HANA Configfile Template
   template:
-    src: "{{ role_path }}/templates/configfile.j2"
+    src: "{{ role_path }}/templates/{{ installation_type }}"
     dest: "{{ tmpdir.path }}/inifile.params"
   register: cftemplate
 

@@ -8,4 +8,14 @@
 - name: Copy SAP S/4HANA Installation Media
   shell: scp -i "{{ private_key }}" -r "{{ s4_media }}" root@"{{ inventory_hostname }}":/media
   delegate_to: localhost
+  when: installation_type == "standard"
 
+- name: Copy SAP S/4HANA Tenant Backup
+  shell: scp -i "{{ private_key }}" -r "{{ backup_location }}" root@"{{ inventory_hostname }}":/media
+  delegate_to: localhost
+  when: installation_type == "system_copy"
+
+- name: Copy SAP S/4HANA Kernel Files
+  shell: scp -i "{{ private_key }}" -r "{{ system_copy_files }}" root@"{{ inventory_hostname }}":/media
+  delegate_to: localhost
+  when: installation_type == "system_copy"
