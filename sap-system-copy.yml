@@ -10,9 +10,6 @@
   tasks:
     - name: Refresh Inventory File
       meta: refresh_inventory
-    - name: Floating IP Association
-      pause: 
-        minutes: 5
 ###########################################################################
 - hosts: hana
   vars_files:
