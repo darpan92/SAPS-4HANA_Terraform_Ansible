@@ -87,3 +87,8 @@ variable "hosts_filename"{
 	type = string
 	default = ""
 }
+
+variable "installation_type"{
+	type = string
+        default = ""
+}
