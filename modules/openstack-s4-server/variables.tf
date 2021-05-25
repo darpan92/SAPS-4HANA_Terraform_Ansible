@@ -45,3 +45,7 @@ variable "floatingip_subnet_id"{
 variable "hosts_filename"{
 	type = string
 }
+
+variable "installation_type"{
+	type = string
+}
