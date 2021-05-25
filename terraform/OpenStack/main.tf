@@ -35,4 +35,5 @@ module "webserver" {
   floatingip_pool = var.floatingip_pool
   floatingip_subnet_id = var.floatingip_subnet_id
   hosts_filename = var.hosts_filename
+  installation_type = var.installation_type
 }
