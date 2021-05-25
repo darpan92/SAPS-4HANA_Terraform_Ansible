@@ -33,3 +33,7 @@ variable "hosts_filename"{
 variable "key_name"{
 	type = string
 }
+
+variable "installation_type"{
+	type = string
+}
