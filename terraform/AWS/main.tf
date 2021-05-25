@@ -25,4 +25,5 @@ module "webserver" {
   volume_name = var.volume_name
   hosts_filename = var.hosts_filename
   key_name = var.key_name
+  installation_type = var.installation_type
 }
