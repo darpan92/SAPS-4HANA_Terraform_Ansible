@@ -1,6 +1,6 @@
 #Secret Variables for Playbook
 {
-	      "installation_type": "system_copy",
+	"installation_type": "system_copy",
         "private_key": "/etc/ansible/dpid_rsa",
         "terraform_workspace": "default",
         "hana_media": "/sapmnt/HANA_INSTALL",
