@@ -51,7 +51,7 @@ resource "local_file" "hosts"{
 }
 
 data "local_file" "template"{
-	filename = "/etc/ansible/vars/ansible_vars.yml"
+	filename = "/etc/ansible/vars/${var.installation_type}.yml"
 }
 
 resource "local_file" "hosts_vars"{
